@@ -58,7 +58,7 @@ public class Generator
 				
 				FileWriter writer = new FileWriter(file);
 				this.W = ((Wmax + Wmin) / (double) 2) * (double) this.Items * this.alfa; 
-				writer.write(String.format("%s %s\n", this.Items,  Math.floor(this.W)));
+				writer.write(String.format("%s %s\n", this.Items, (int) Math.floor(this.W)));
 				for (int k = 0; k < Items; k++)
 				{
 					writer.write(String.format("%s %s %s\n", k + 1, Values.get(k), Weights.get(k)));
