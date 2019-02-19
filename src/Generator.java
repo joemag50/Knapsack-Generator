@@ -61,7 +61,7 @@ public class Generator
 				writer.write(String.format("%s %s\n", this.Items, (int) Math.floor(this.W)));
 				for (int k = 0; k < Items; k++)
 				{
-					writer.write(String.format("%s %s %s\n", k + 1, Values.get(k), Weights.get(k)));
+					writer.write(String.format("%s %s %s\n", k, Values.get(k), Weights.get(k)));
 				}
 				writer.close();
 			} catch (IOException e1) {

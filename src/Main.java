@@ -13,8 +13,19 @@ public class Main
 		String sufix = m.sc.nextLine();
 		
 		int instances = m.ReadInt("How many instances?");
+		if (instances <= 0)
+		{
+			System.out.println("Must be greater than 0");
+			return;
+		}
 		
 		int items = m.ReadInt("How many items?");
+		
+		if (items <= 0)
+		{
+			System.out.println("Must be greater than 0");
+			return;
+		}
 		
 		int vmax = 0, vmin = 0;
 		double wmax = 0, wmin = 0;
@@ -35,6 +46,17 @@ public class Main
 			}
 		}
 		
+		if (vmax <= 0)
+		{
+			System.out.println("Must be greater than 0");
+			return;
+		}
+		if (vmin <= 0)
+		{
+			System.out.println("Must be greater than 0");
+			return;
+		}
+		
 		isLesser = true;
 		while (isLesser)
 		{
@@ -51,6 +73,16 @@ public class Main
 			}
 		}
 		
+		if (wmax <= 0)
+		{
+			System.out.println("Must be greater than 0");
+			return;
+		}
+		if (wmin <= 0)
+		{
+			System.out.println("Must be greater than 0");
+			return;
+		}
 		double alfa = m.ReadDouble("Alfa value:");
 		
 		//System.out.println(String.format("%s %s %s %s %s %s %s %s", sufix, instances, items, vmax, vmin, wmax, wmin, alfa));
