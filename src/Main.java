@@ -84,6 +84,12 @@ public class Main
 			return;
 		}
 		double alfa = m.ReadDouble("Alfa value:");
+
+		if (alfa <= 0)
+		{
+			System.out.println("Must be greater than 0");
+			return;
+		}
 		
 		//System.out.println(String.format("%s %s %s %s %s %s %s %s", sufix, instances, items, vmax, vmin, wmax, wmin, alfa));
 		Generator g = new Generator(sufix, instances, items, vmax, vmin, wmax, wmin, alfa);
